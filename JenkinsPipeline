@@ -1,0 +1,45 @@
+pipeline{
+  agent any
+
+  stages{
+    stage(checkout){
+      steps{
+        echo "checkout phase: pulling code from repo"
+      }
+    }
+    stage(build){
+      steps{
+        echo "build pase"
+      }
+    }
+    stage(test){
+      steps{
+        echo "Test phase"
+      }
+    }
+    stage(staging){
+      steps{
+        echo "Staging: A staging environment (stage) is a nearly exact replica of a production environment for software testing"
+      }
+    }
+    stage(deploy){
+      steps{
+        echo "Deploy"
+      }
+    }
+    stage(monitor){
+      steps{
+        echo "Monitor"
+      }
+    }
+  }
+
+  post{
+    Success{
+      echo "sucessful"
+    }
+    failure{
+      echo "failure"
+    }
+  }
+}
