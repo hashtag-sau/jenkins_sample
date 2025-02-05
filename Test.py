@@ -1,6 +1,6 @@
 import unittest
 
-from Addition.py import add
+from Addition import add
 
 class TestSum(unittest.TestCase):
     def test_list_int(self):
