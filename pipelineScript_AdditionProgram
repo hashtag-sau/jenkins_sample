@@ -20,8 +20,4 @@ pipeline {
         }
     } 
 }
-stage('Ansible Deployment') {
-             steps {
-                    ansible-playbook installation: 'Ansible', playbook: 'deploy-playbook.yml'
-             }
-         }
+
